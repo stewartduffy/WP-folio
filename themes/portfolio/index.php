@@ -4,12 +4,24 @@
                     
             <?php include('global_nav.php') ?>
             
-        	<div class="content_box">
-            	<span class="top"></span>
-        <p><span class="dropCap">H</span>ello and welcome to my digital portfolio. My name is Stewart and I am an interactive designer, here are some of the projects I have worked on in the past year.</p>
-        <p>I have recently completed a Diploma in Digital Media at Media Design School, and am currently looking for work in this field. If you like my work and are currently hiring please take a look at my <a href="http://stewart-d.dmlive.co.nz/wp-content/uploads/2010/05/stewart_duffy_cv.pdf">Curriculum Vitae.</a></p>
-                <span class="bottom"></span>
-            </div>
+	    <div class="content_box">
+		<span class="top"></span>
+		    <?php
+		    $intro_page = new WP_Query();
+		    $conditions = array(
+			'page_id' => 114
+		     );
+		    $intro_page->query( $conditions );
+		    if($intro_page->have_posts()){
+			while ($intro_page->have_posts()) {
+			     $intro_page->the_post();
+			     ?>
+			     <?php the_content();
+			     }
+			}
+			?>
+		<span class="bottom"></span>
+	    </div>
 
 <?php
 	if(is_home()){

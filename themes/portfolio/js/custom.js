@@ -17,6 +17,7 @@ jQuery(document).ready(function($){
 	}
   });
   
+  
 	$('div.screen_slider').serialScroll({
 		target:'div.sections',
 		items:'li',
