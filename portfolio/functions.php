@@ -10,7 +10,7 @@ function my_scripts(){
   wp_enqueue_script('jquery', "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", array(), '1.7.1', true );
   wp_enqueue_script('plugins', $template_url."/js/plugins-min.js", array(), '1', true );
   wp_enqueue_script('theme_custom', $template_url."/js/theme-min.js", array(), '1', true );
-
+  wp_enqueue_script('modernizr', $template_url."/js/libs/modernizr-2.5.3.min.js", array(), '2.5.3' );
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
 

@@ -9,7 +9,7 @@ jQuery.easing.easeOutQuart = function (x, t, b, c, d) {
 };
 
 jQuery(document).ready(function($){
-  Shadowbox.init();
+  //Shadowbox.init();
 
     
   $('a.scroll_link ').smoothScroll({
@@ -27,7 +27,7 @@ jQuery(document).ready(function($){
           onBefore:function( e, elem, $pane, $items, pos ){
                   e.preventDefault();
                   if( this.blur ){
-                          this.blur();
+                      this.blur();
                   }
           },
           onAfter:function( elem ){
