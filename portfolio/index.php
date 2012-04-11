@@ -43,23 +43,23 @@ if( $projectTotal > 0 ) {
 	while ($project->fetchRecord()) {	
 
 	//common variables
-	$name		 		= $project->get_field('name');
-	$images				= $project->get_field('images');
-	$description		= $project->get_field('description');
-	$time_frame		= $project->get_field('time_frame');
+	$name	      = $project->get_field('name');
+	$images		= $project->get_field('images');
+	$description	= $project->get_field('description');
+	$time_frame	= $project->get_field('time_frame');
 	$sub_heading	= $project->get_field('sub_heading');
-	$url						= $project->get_field('url');
-	$embed				= $project->get_field('embed');
-	$displayorder		= $project->get_field('displayorder');
-	$publish 				= $project->get_field('publish');
-	
-		
-	$images     		= $images[0]['guid'];
-	$imageArray 		= $project->get_field('images');
-	$count 				= count($imageArray);
-	$displayorder		= round($displayorder);
-	//$nextproject		= $displayorder+1;
-	$nextproject		= ($nextproject++)+1;
+	$url		= $project->get_field('url');
+	$embed		= $project->get_field('embed');
+	$displayorder	= $project->get_field('displayorder');
+	$publish 	= $project->get_field('publish');
+        
+        //clean up
+	$images     	= $images[0]['guid'];
+	$imageArray 	= $project->get_field('images');
+	$count 		= count($imageArray);
+	$displayorder	= round($displayorder);
+	//$nextproject	= $displayorder+1;
+	$nextproject	= ($nextproject++)+1;
 ?>
 
         	<div class="content_box project" id="<?php echo "id-".$id++ ?>">
@@ -133,5 +133,4 @@ if( $projectTotal > 0 ) {
         </div>
         <div class="clear"></div>
     </div>
-</body>
-</html>
+<?php get_footer(); ?>

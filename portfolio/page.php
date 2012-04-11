@@ -71,5 +71,4 @@
         </div>
         <div class="clear"></div>
     </div>
-</body>
-</html>
+<?php get_footer(); ?>
